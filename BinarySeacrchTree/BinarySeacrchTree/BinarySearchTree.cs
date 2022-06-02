@@ -19,7 +19,7 @@ namespace Binary_Search_Tree
             this.Left = null;
             this.Right = null;
         }
-        
+        int leftCount = 0, rightCount = 0;
         // To insert values in a binary tree
         public void Insert(T data)
         {
@@ -35,6 +35,7 @@ namespace Binary_Search_Tree
                 {
                     this.Left.Insert(data);
                 }
+                leftCount += 1;
             }
             else
             {
@@ -47,6 +48,7 @@ namespace Binary_Search_Tree
                 {
                     this.Right.Insert(data);
                 }
+                rightCount += 1;
             }
         }
 
@@ -64,6 +66,12 @@ namespace Binary_Search_Tree
                 
                 this.Right.Display();
             }
+        }
+
+        public void size()
+        {
+            Console.WriteLine("Total Left elements are {0} and right elements are {1}",this.leftCount,this.rightCount);
+            Console.WriteLine("Total nodes of tree are "+(this.leftCount+this.rightCount+1));
         }
         }
     }
