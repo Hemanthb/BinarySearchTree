@@ -13,3 +13,12 @@ binaryTree.Insert(63);
 binaryTree.Insert(67);
 binaryTree.Display();
 binaryTree.size();
+bool yes = binaryTree.Search(30,binaryTree);
+if(yes)
+{
+    Console.WriteLine("Given value is found in the tree");
+}
+else
+{
+    Console.WriteLine("Given value is not found in the tree");
+}
